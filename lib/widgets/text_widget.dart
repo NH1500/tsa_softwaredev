@@ -19,9 +19,9 @@ class TextWidget extends StatelessWidget {
       label,
       // textAlign: TextAlign.justify,
       style: TextStyle(
-        color: color ?? const Color.fromARGB(255, 69, 69, 69),
+        color: color ?? Colors.white,
         fontSize: fontSize,
-        fontWeight: fontWeight ?? FontWeight.w200,
+        fontWeight: fontWeight ?? FontWeight.w500,
       ),
     );
   }

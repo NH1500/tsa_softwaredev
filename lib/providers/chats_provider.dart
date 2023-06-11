@@ -16,11 +16,12 @@ class ChatProvider with ChangeNotifier {
 
   Future<void> sendMessageAndGetAnswers(
       {required String msg, required String chosenModelId}) async {
-    chatList.addAll(await ApiService.sendMessageGPT(
+    chatList.addAll(await sendMessage(
       message: msg,
       modelId: chosenModelId,
     ));
-
-    notifyListeners();
   }
+
+  @override
+  notifyListeners();
 }

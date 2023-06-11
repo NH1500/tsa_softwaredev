@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import 'constants/constants.dart';
 import 'providers/chats_provider.dart';
 import 'screens/chat_screen.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: 'Flutter ChatBot',
+        title: 'Flutter ChatBOT',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
             scaffoldBackgroundColor: scaffoldBackgroundColor,
