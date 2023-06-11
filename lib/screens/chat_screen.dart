@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
 import '../services/assets_manager.dart';
-import '../services/memory_service.dart';
+//import '../services/memory_service.dart';
 import '../widgets/text_widget.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -43,7 +43,7 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     final chatProvider = Provider.of<ChatProvider>(context);
-    final Memory memory = Memory();
+    //final Memory memory = Memory();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: accentColor,
