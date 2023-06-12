@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'dart:developer' as developer;
 import 'package:tsa_softwaredev/constants/constants.dart';
 import 'package:tsa_softwaredev/providers/chats_provider.dart';
+import 'package:tsa_softwaredev/services/memory_service.dart';
 import 'package:tsa_softwaredev/widgets/chat_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -43,7 +44,7 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     final chatProvider = Provider.of<ChatProvider>(context);
-    //final Memory memory = Memory();
+    final Memory memory = Memory(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: accentColor,
@@ -52,7 +53,7 @@ class _ChatScreenState extends State<ChatScreen> {
           padding: const EdgeInsets.all(8.0),
           child: Image.asset(AssetsManager.openaiLogo),
         ),
-        title: const Text("ChatGPT"),
+        title: const Text("TSA Software Development 2023"),
         actions: [
           IconButton(
             onPressed: () async {
@@ -102,7 +103,8 @@ class _ChatScreenState extends State<ChatScreen> {
                         controller: textEditingController,
                         onSubmitted: (value) async {
                           await sendMessageFCT(chatProvider: chatProvider);
-                          developer.log(chatProvider.chatList.first.msg);
+                          // ignore: use_build_context_synchronously
+                          developer.log(memory.concatenate(context));
                         },
                         decoration: const InputDecoration.collapsed(
                             hintText: "How can I help you",
@@ -166,7 +168,7 @@ class _ChatScreenState extends State<ChatScreen> {
         focusNode.unfocus();
       });
       await chatProvider.sendMessageAndGetAnswers(
-          msg: msg, chosenModelId: currentModel);
+          msg: msg, chosenModelId: currentModel, context: context);
       setState(() {});
     } catch (error) {
       log("error $error");

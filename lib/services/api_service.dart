@@ -1,17 +1,20 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
-
+import 'package:flutter/material.dart';
 import 'package:tsa_softwaredev/constants/api_consts.dart';
 import 'package:tsa_softwaredev/models/chat_model.dart';
 import 'package:http/http.dart' as http;
-
 import '../constants/constants.dart';
+import 'memory_service.dart';
 
 // Send Message fct
 Future<List<ChatModel>> sendMessage(
-    {required String message, required String modelId}) async {
+    {required String message,
+    required String modelId,
+    required BuildContext context}) async {
   try {
+    final Memory memory = Memory(context);
     log("modelId $modelId");
     var response = await http.post(
       Uri.parse("$BASE_URL/completions"),
@@ -22,8 +25,10 @@ Future<List<ChatModel>> sendMessage(
       body: jsonEncode(
         {
           "model": modelId,
-          "prompt": '$prompt $message',
-          "max_tokens": 300,
+          "prompt": '$prompt ${memory.concatenate(context)}',
+          "max_tokens": 1000,
+          "temperature": 0.7,
+          "presence_penalty": .2,
         },
       ),
     );

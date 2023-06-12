@@ -15,11 +15,11 @@ class ChatProvider with ChangeNotifier {
   }
 
   Future<void> sendMessageAndGetAnswers(
-      {required String msg, required String chosenModelId}) async {
+      {required String msg,
+      required String chosenModelId,
+      required BuildContext context}) async {
     chatList.addAll(await sendMessage(
-      message: msg,
-      modelId: chosenModelId,
-    ));
+        message: msg, modelId: chosenModelId, context: context));
   }
 
   @override
