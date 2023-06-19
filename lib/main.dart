@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import 'services/local_storage.dart';
 import 'constants/constants.dart';
 import 'providers/chats_provider.dart';
 import 'screens/chat_screen.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await localStorage.init();
+  localStorage.setStreak(4);
+  localStorage.getStreak() != null
+      ? localStorage.setStreak(localStorage.getStreak()! + 1)
+      : localStorage.setStreak(1);
   runApp(const MyApp());
 }
 

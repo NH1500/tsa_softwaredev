@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'dart:developer' as developer;
 import 'package:tsa_softwaredev/constants/constants.dart';
 import 'package:tsa_softwaredev/providers/chats_provider.dart';
+import 'package:tsa_softwaredev/screens/streak_screen.dart';
 import 'package:tsa_softwaredev/services/memory_service.dart';
 import 'package:tsa_softwaredev/widgets/chat_widget.dart';
 import 'package:flutter/material.dart';
@@ -56,10 +57,13 @@ class _ChatScreenState extends State<ChatScreen> {
         title: const Text("TSA Software Development 2023"),
         actions: [
           IconButton(
+            tooltip: "Streak",
+            icon: const Icon(Icons.fireplace_outlined, color: Colors.white),
             onPressed: () async {
               //do something
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const StreakScreen()));
             },
-            icon: const Icon(Icons.more_vert_rounded, color: Colors.white),
           ),
         ],
       ),
