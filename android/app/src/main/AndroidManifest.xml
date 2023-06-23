@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chatgpt_course">
+    package="com.example.tsa_softwaredev">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="chatgpt_course"
+        android:label="tsa_softwaredev"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

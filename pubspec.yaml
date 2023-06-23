@@ -41,6 +41,10 @@ dependencies:
   provider: ^6.0.5
   animated_text_kit: ^4.2.2
   shared_preferences: ^2.1.2
+  flutter_native_splash: ^2.3.1
+  google_fonts: ^4.0.4
+  flutter_launcher_icons: ^0.13.1
+  smooth_page_indicator: ^1.0.0
 
 dev_dependencies:
   flutter_test:
@@ -53,9 +57,20 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
 
+flutter_icons:
+  image_path_android: "assets/images/openai_logo.png"
+  image_path_ios: "assets/images/openai_logo.png"
+  android: true # can specify file name here e.g. "ic_launcher"
+  ios: true # can specify file name here e.g. "My-Launcher-Icon"
+  min_sdk_android: 16 # android min sdk min:16, default 21
+  remove_alpha_ios: true
+  background_color_ios: "#ffffff"
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/images/openai_logo.png"
 # The following section is specific to Flutter packages.
 flutter:
 

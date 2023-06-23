@@ -1,6 +1,6 @@
 {
-    "name": "chatgpt_course",
-    "short_name": "chatgpt_course",
+    "name": "tsa_softwaredev",
+    "short_name": "tsa_softwaredev",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

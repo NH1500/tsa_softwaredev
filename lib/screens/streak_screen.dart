@@ -17,9 +17,7 @@ class _StreakScreenState extends State<StreakScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: const Text('Navigate to a new screen on Button click'),
-          backgroundColor: accentColor),
+      appBar: AppBar(title: const Text('Streak'), backgroundColor: accentColor),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

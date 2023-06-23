@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'dart:developer' as developer;
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tsa_softwaredev/constants/constants.dart';
 import 'package:tsa_softwaredev/providers/chats_provider.dart';
 import 'package:tsa_softwaredev/screens/streak_screen.dart';
@@ -56,15 +57,15 @@ class _ChatScreenState extends State<ChatScreen> {
         ),
         title: const Text("TSA Software Development 2023"),
         actions: [
-          IconButton(
-            tooltip: "Streak",
-            icon: const Icon(Icons.fireplace_outlined, color: Colors.white),
-            onPressed: () async {
-              //do something
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const StreakScreen()));
-            },
-          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: GestureDetector(
+                onTap: () async {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) => const StreakScreen()));
+                },
+                child: Image.asset(AssetsManager.fireIcon)),
+          )
         ],
       ),
       body: SafeArea(
@@ -86,8 +87,8 @@ class _ChatScreenState extends State<ChatScreen> {
                   }),
             ),
             if (_isTyping) ...[
-              const SpinKitThreeBounce(
-                color: Colors.white,
+              SpinKitThreeBounce(
+                color: accentColor,
                 size: 18,
               ),
             ],
@@ -103,16 +104,17 @@ class _ChatScreenState extends State<ChatScreen> {
                     Expanded(
                       child: TextField(
                         focusNode: focusNode,
-                        style: const TextStyle(color: Colors.white),
+                        style: GoogleFonts.quicksand(color: Colors.white),
                         controller: textEditingController,
                         onSubmitted: (value) async {
                           await sendMessageFCT(chatProvider: chatProvider);
                           // ignore: use_build_context_synchronously
                           developer.log(memory.concatenate(context));
                         },
-                        decoration: const InputDecoration.collapsed(
-                            hintText: "How can I help you",
-                            hintStyle: TextStyle(color: Colors.grey)),
+                        decoration: InputDecoration.collapsed(
+                            hintText: "Type here...",
+                            hintStyle:
+                                GoogleFonts.quicksand(color: Colors.grey)),
                       ),
                     ),
                     IconButton(
