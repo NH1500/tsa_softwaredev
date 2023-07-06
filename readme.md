@@ -23,7 +23,7 @@
     <a href="lib"><strong>Explore the Source Code »</strong></a>
     <br />
     <br />
-    <a href="release">Try it for yourself</a>
+    <a href="Release">Try it for yourself</a>
   </p>
 </div>
 
