@@ -20,10 +20,10 @@
   <p align="center">
     A project developed for the Technology Student Assosiation Software Development competition
     <br />
-    <a href="https://github.com/NH1500/tsa_softwaredev/lib"><strong>Explore the Source Code »</strong></a>
+    <a href="lib"><strong>Explore the Source Code »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/NH1500/tsa_softwaredev/release">Try it for yourself</a>
+    <a href="release">Try it for yourself</a>
   </p>
 </div>
 
