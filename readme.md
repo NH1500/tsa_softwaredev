@@ -60,7 +60,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A multi-platform app developed with flutter using the OpenAI API. This app acts as a personal mental health therapist or counselor for people, especiallly teens, who are struggling with their mental health, but are too scared or embarassed to talk to a mental health professional about it. This project finished 19th at the TSA National Conference in Louisville, Kentucky.
+A multi-platform app developed with flutter using the OpenAI API. This app acts as a personal mental health therapist or counselor for people, especiallly teens, who are struggling with their mental health, but are too scared or embarassed to talk to a mental health professional about it. This project finished <b>19th<\b> at the TSA National Conference in Louisville, Kentucky.
 
 
 
