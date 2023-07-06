@@ -60,7 +60,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A multi-platform app developed with flutter using the OpenAI API. This app acts as a personal mental health therapist or counselor for people, especiallly teens, who are struggling with their mental health, but are too scared or embarassed to talk to a mental health professional about it.
+A multi-platform app developed with flutter using the OpenAI API. This app acts as a personal mental health therapist or counselor for people, especiallly teens, who are struggling with their mental health, but are too scared or embarassed to talk to a mental health professional about it. This project finished 19th at the TSA National Conference in Louisville, Kentucky.
 
 
 
@@ -70,8 +70,6 @@ A multi-platform app developed with flutter using the OpenAI API. This app acts 
 * ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
 * ![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -79,5 +77,3 @@ A multi-platform app developed with flutter using the OpenAI API. This app acts 
 
 1. Download folder "Release" from this repo
 2. Run tsa_softwaredev.exe
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
