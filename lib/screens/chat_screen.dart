@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:developer';
 import 'dart:developer' as developer;
 import 'package:google_fonts/google_fonts.dart';
@@ -108,7 +110,6 @@ class _ChatScreenState extends State<ChatScreen> {
                         controller: textEditingController,
                         onSubmitted: (value) async {
                           await sendMessageFCT(chatProvider: chatProvider);
-                          // ignore: use_build_context_synchronously
                           developer.log(memory.concatenate(context));
                         },
                         decoration: InputDecoration.collapsed(
